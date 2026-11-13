@@ -51,6 +51,7 @@ app.post('/ask', async (req, res) => {
   }
 });
 
-app.listen(process.env.PORT , () => {
-    console.log(`Server successfully started on port ${process.env.PORT}`);
+
+app.listen(process.env.PORT || 8000, '0.0.0.0', () => {
+    console.log(`Server successfully started on port ${process.env.PORT || 8000}`);
 });
