@@ -43,7 +43,9 @@ const App = () => {
   setChats(prev =>
     prev.map(chat =>
       chat.id === activeChatID
-        ? { ...chat, messages: messages }
+        ? { ...chat, 
+           title: messages.find(msg => msg.sender === 'user')?.text || chat.title,
+          messages: messages }
         : chat
     )
   )
