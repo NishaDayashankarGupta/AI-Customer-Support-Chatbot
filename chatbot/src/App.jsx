@@ -55,15 +55,16 @@ const App = () => {
 
 
 
- 
-
-
-
   //new btn click message empty
 
   const handleNewChat = () => {
     setMessages([])
     setActiveChatID(null)
+  }
+
+  const handleSelectChat = (chat)=>{
+    setMessages(chat.messages)
+    setActiveChatID(chat.id)
   }
 
   return (
