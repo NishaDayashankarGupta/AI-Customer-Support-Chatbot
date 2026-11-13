@@ -15,6 +15,10 @@ console.log("API KEY STATUS:", process.env.KEY ? "Valid Key Found ✅" : "Missin
 
 const ai = new GoogleGenAI({ apiKey: process.env.KEY });
 
+app.get("/", (req, res) =>{
+  res.send("AI Chatbot backend is working")
+})
+
 app.post('/ask', async (req, res) => {
   try {
     const { message } = req.body;
