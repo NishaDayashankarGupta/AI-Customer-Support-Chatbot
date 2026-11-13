@@ -42,7 +42,7 @@ const ChatWindow = (props) => {
 
       // await new Promise(resolve => setTimeout(resolve, 2000))
       // 2. Send message to backend
-      const response = await fetch('http://localhost:8000/ask', {
+      const response = await fetch('https://ai-customer-support-chatbot-gol2.onrender.com/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
