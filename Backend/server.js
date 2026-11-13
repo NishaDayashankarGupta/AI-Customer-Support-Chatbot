@@ -32,7 +32,7 @@ app.post('/ask', async (req, res) => {
 
     // Initialize chat session
     const chat = ai.chats.create({
-      model: 'gemini-3.8-flash'
+     model: 'gemini-3.5-flash-lite'
     });
 
     console.log("Sending request to Google Gemini API...");
